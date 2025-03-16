@@ -1,9 +1,8 @@
 #!/usr/bin/env node
-
-const { Command } = require('commander');
-const chalk = require('chalk');
-const shell = require('shelljs');
-const fs = require('fs');
+import { Command } from 'commander';
+import chalk from 'chalk';
+import shell from 'shelljs';
+import fs from 'fs';
 
 const program = new Command();
 
@@ -41,6 +40,8 @@ function createFrontend() {
     return;
   }
 
+  shell.mkdir('my_frontend')
+  shell.cd('my_frontend')
   shell.exec('npx create-react-app frontend --template typescript');
   console.log(chalk.green('Frontend initialized successfully!'));
 }
@@ -51,8 +52,8 @@ function createBackend() {
     return;
   }
 
-  shell.mkdir('backend');
-  shell.cd('backend');
+  shell.mkdir('my_backend');
+  shell.cd('my_backend');
   shell.exec('python -m venv venv');
   shell.exec('source venv/bin/activate && pip install flask');
   fs.writeFileSync(

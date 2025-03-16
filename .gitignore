@@ -1,6 +1,7 @@
 # macOS files
 .DS_Store
 
+
 # Shell history and config files
 .bash_history
 .bash_profile
@@ -24,3 +25,5 @@ npm-debug.log
 *.log
 .env
 
+# python venv
+venv
