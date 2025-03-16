@@ -1,0 +1,26 @@
+# macOS files
+.DS_Store
+
+# Shell history and config files
+.bash_history
+.bash_profile
+.bashrc
+.zshrc
+.profile
+
+# Python files
+__pycache__/
+*.pyc
+
+# Node.js files
+node_modules/
+npm-debug.log
+
+# VSCode
+.vscode/
+
+# Other common files
+.idea/
+*.log
+.env
+
