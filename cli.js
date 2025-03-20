@@ -43,6 +43,7 @@ function createFrontend() {
   shell.mkdir('my_frontend')
   shell.cd('my_frontend')
   shell.exec('npx create-react-app frontend --template typescript');
+  shell.cd('../')
   console.log(chalk.green('Frontend initialized successfully!'));
 }
 
@@ -72,4 +73,5 @@ if __name__ == '__main__':
   );
 
   console.log(chalk.green('Backend initialized successfully!'));
+  shell.cd('../')
 }
